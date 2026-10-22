@@ -1,0 +1,21 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: diet-recommendation
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: diet-recommendation
+  template:
+    metadata:
+      labels:
+        app: diet-recommendation
+    spec:
+      containers:
+        - name: diet-app
+          image: rithikarajanish/diet-recommendation-system:latest
+          ports:
+            - containerPort: 8501
+          imagePullPolicy: Always
