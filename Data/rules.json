@@ -1,0 +1,280 @@
+[
+    {
+        "id": "R1",
+        "if": {
+            "goal": "weight_loss"
+        },
+        "then": {
+            "target": "calorie_controlled"
+        }
+    },
+    {
+        "id": "R2",
+        "if": {
+            "goal": "weight_gain"
+        },
+        "then": {
+            "target": "higher_energy"
+        }
+    },
+    {
+        "id": "R3",
+        "if": {
+            "goal": "maintenance"
+        },
+        "then": {
+            "target": "balanced_energy"
+        }
+    },
+
+    {
+        "id": "R4",
+        "if": {
+            "diet": "vegetarian"
+        },
+        "then": {
+            "diet_exclusion": "non_vegetarian"
+        }
+    },
+    {
+        "id": "R5",
+        "if": {
+            "diet": "vegan"
+        },
+        "then": {
+            "diet_exclusion": "animal_products"
+        }
+    },
+    {
+        "id": "R6",
+        "if": {
+            "diet": "non_vegetarian"
+        },
+        "then": {
+            "diet_access": "vegetarian_and_non_vegetarian"
+        }
+    },
+
+    {
+        "id": "R7",
+        "if": {
+            "restriction": "dairy"
+        },
+        "then": {
+            "allergen_exclusion": "dairy"
+        }
+    },
+    {
+        "id": "R8",
+        "if": {
+            "restriction": "gluten"
+        },
+        "then": {
+            "allergen_exclusion": "gluten"
+        }
+    },
+    {
+        "id": "R9",
+        "if": {
+            "restriction": "seafood"
+        },
+        "then": {
+            "allergen_exclusion": "seafood"
+        }
+    },
+    {
+        "id": "R10",
+        "if": {
+            "restriction": "peanut"
+        },
+        "then": {
+            "allergen_exclusion": "peanut"
+        }
+    },
+    {
+        "id": "R11",
+        "if": {
+            "restriction": "sesame"
+        },
+        "then": {
+            "allergen_exclusion": "sesame"
+        }
+    },
+    {
+        "id": "R12",
+        "if": {
+            "restriction": "egg"
+        },
+        "then": {
+            "allergen_exclusion": "egg"
+        }
+    },
+    {
+        "id": "R13",
+        "if": {
+            "restriction": "soy"
+        },
+        "then": {
+            "allergen_exclusion": "soy"
+        }
+    },
+    {
+        "id": "R14",
+        "if": {
+            "restriction": "nuts"
+        },
+        "then": {
+            "allergen_exclusion": "nuts"
+        }
+    },
+
+    {
+        "id": "R15",
+        "if": {
+            "activity": "sedentary"
+        },
+        "then": {
+            "energy_level": "low"
+        }
+    },
+    {
+        "id": "R16",
+        "if": {
+            "activity": "moderate"
+        },
+        "then": {
+            "energy_level": "medium"
+        }
+    },
+    {
+        "id": "R17",
+        "if": {
+            "activity": "high"
+        },
+        "then": {
+            "energy_level": "high"
+        }
+    },
+
+    {
+        "id": "R18",
+        "if": {
+            "bmi_category": "underweight"
+        },
+        "then": {
+            "body_category": "underweight"
+        }
+    },
+    {
+        "id": "R19",
+        "if": {
+            "bmi_category": "normal"
+        },
+        "then": {
+            "body_category": "normal"
+        }
+    },
+    {
+        "id": "R20",
+        "if": {
+            "bmi_category": "overweight"
+        },
+        "then": {
+            "body_category": "overweight"
+        }
+    },
+    {
+        "id": "R21",
+        "if": {
+            "bmi_category": "obesity"
+        },
+        "then": {
+            "body_category": "obesity"
+        }
+    },
+
+    {
+        "id": "R22",
+        "if": {
+            "diet_conflict": true
+        },
+        "then": {
+            "food_action": "reject_food"
+        }
+    },
+    {
+        "id": "R23",
+        "if": {
+            "allergen_conflict": true
+        },
+        "then": {
+            "food_action": "reject_food"
+        }
+    },
+    {
+        "id": "R24",
+        "if": {
+            "meal_category_match": true
+        },
+        "then": {
+            "food_action": "candidate_food"
+        }
+    },
+    {
+        "id": "R25",
+        "if": {
+            "dietary_restrictions_satisfied": true
+        },
+        "then": {
+            "food_action": "candidate_food"
+        }
+    },
+
+    {
+        "id": "R26",
+        "if": {
+            "goal": "weight_loss"
+        },
+        "then": {
+            "food_preference": "lower_calorie"
+        }
+    },
+    {
+        "id": "R27",
+        "if": {
+            "goal": "weight_gain"
+        },
+        "then": {
+            "food_preference": "higher_calorie"
+        }
+    },
+    {
+        "id": "R28",
+        "if": {
+            "goal": "maintenance"
+        },
+        "then": {
+            "food_preference": "balanced_calories"
+        }
+    },
+    {
+    "id": "R29",
+    "if": {
+        "bmi_category": "underweight",
+        "goal": "weight_loss"
+    },
+    "then": {
+        "warning": "Weight loss is not recommended for an underweight individual. Please consult a healtcare professional."
+       }
+    },
+    {
+    "id": "R30",
+    "if": {
+        "bmi_category": "obesity",
+        "goal": "weight_gain"
+    },
+    "then": {
+        "warning": "Weight gain is not recommended for an individual with obesity. Please consult a healtcare professional."
+    }
+    }
+]
