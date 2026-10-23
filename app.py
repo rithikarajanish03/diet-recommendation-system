@@ -143,6 +143,7 @@ def display_food(food, rank):
 # =========================================
 
 st.title("🥗 Diet Recommendation System")
+st.caption("Powered by an automated CI/CD pipeline")
 
 st.write(
     "Find food options based on your meal preference, "
